@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>My Blog</title>
+    </head>
+    <body>
+        <div class="header">
+            @RenderSection("Header")
+        </div>
+    
+        @RenderBody()
+    
+        <div class="footer">
+            @RenderSection("Footer", required: false)
+        </div>
+    </body>
+</html>

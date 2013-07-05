@@ -1,0 +1,11 @@
+﻿@{ 
+    var post = Page.Post;
+    var url = "http://www.myblog.com/posts/post.cshtml?id=" + post.ID; 
+}
+    
+<div>
+    <h3>@post.Title</h3>
+    <div>@post.Body</div>
+    @TwitterHelpers.TweetButton( url: url, text: @post.Title )
+    @Facebook.LikeButton( href: url )
+</div>

@@ -1,0 +1,6 @@
+﻿<div>Layout: @Layout</div>
+<div>Level 1 Default.cshtml page content</div>
+<div>@Request.Url</div>
+@section Header { }
+
+@{ throw new ApplicationException(); }

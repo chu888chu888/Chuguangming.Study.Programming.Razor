@@ -1,0 +1,37 @@
+﻿@{ Layout = null; }
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        The time is @DateTime.Now
+        
+        <div>AsInt(): @("word".AsInt(10))</div>
+        
+        @{ var user = "Jess"; }
+        
+        @if(user != null) { 
+            @: Hello, @user! 
+        }
+        else { 
+            @: Please log in. 
+        }
+        
+        
+        
+<div>
+First
+@* Second *@
+Third @* Fourth *@ Fifth
+</div>
+        
+        <div>
+            Last run: @AppState["Timestamp"]
+        </div>
+        
+        
+    </body>
+</html>

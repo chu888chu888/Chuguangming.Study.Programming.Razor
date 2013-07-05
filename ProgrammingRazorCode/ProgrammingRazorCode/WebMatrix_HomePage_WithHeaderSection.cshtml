@@ -1,0 +1,16 @@
+@{  
+    Layout = "~/_Layout.cshtml";
+    var db = Database.Open("Blog");
+    var posts = db.Query("SELECT ID,Title,Body FROM Posts");
+}
+
+@section Header {
+    <h1>My Blog</h1>
+}
+        
+    @foreach(var post in posts) {
+        <div>
+            <h3>@post.Title</h3>
+            <div>@post.Body</div>
+        </div>
+    }

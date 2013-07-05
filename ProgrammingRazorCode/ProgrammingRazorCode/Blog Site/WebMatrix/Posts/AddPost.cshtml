@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "~/_AdminLayout.cshtml";
+    
+    var title = Request["Title"];
+    var summary = Request["Summary"];
+    var body = Request["Body"];
+
+	// Only validate form fields during a POST (not during the initial GET)
+    if(IsPost) {
+        if(title.IsEmpty()) {
+            ModelState.AddError("title", "Post title cannot be empty");
+        }
+        
+        if(summary.IsEmpty()) {
+            ModelState.AddError("summary", "Post summary cannot be empty");
+        }
+        
+        if(body.IsEmpty()) {
+            ModelState.AddError("body", "Post body cannot be empty");
+        }
+    }
+}
+    
+    @if (IsPost && ModelState.IsValid) 
+    {
+        Database
+            .Open("Blog")
+            .Execute("INSERT INTO Posts (Title, Summary, Body) " +
+                     "VALUES(@0,@1,@2)",
+                    title, summary, body);
+        
+        <fieldset>
+            <legend>Posted Values: </legend>
+    
+            <p>
+                <label>Title: </label> 
+                <span>@title</span>
+            </p>
+            
+            <p>
+                <label>Summary: </label> 
+                <span>@summary</span>
+            </p>
+            
+            <p><label>Body: </label></p>
+            <p><div>@body</div></p>
+            
+        </fieldset>
+    }
+        
+    <form method="post" action="">
+        <fieldset>
+            
+            <legend>New Blog Post</legend>
+            
+            @Html.ValidationSummary()
+
+            <div>
+                @Html.ValidationMessage("Title", "*")
+                <label for="Title">Title</label>
+                <input type="text" name="Title" value="@title"/>
+            </div>
+            
+            <div>
+                @Html.ValidationMessage("Summary", "*")
+                <label for="Summary">Summary</label>
+                <input type="text" name="Summary" value="@summary" />
+            </div>
+                        
+            <div>
+                <p>
+                    @Html.ValidationMessage("Body", "*")
+                    <label for="Body">Body</label>
+                </p>
+                <textarea cols="40" rows="10" name="Body">@body</textarea>
+            </div>
+            
+            <div>
+                <button type="submit">Add Post</button>
+            </div>
+                        
+        </fieldset>
+    </form>

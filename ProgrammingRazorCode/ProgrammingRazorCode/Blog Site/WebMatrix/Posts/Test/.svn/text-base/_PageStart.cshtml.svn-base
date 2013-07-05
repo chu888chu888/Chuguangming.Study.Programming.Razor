@@ -1,0 +1,6 @@
+﻿@{
+    Context.Trace.Write("Level 2 _PageStart.cshtml");
+}
+<div>
+    Test: @index
+</div>

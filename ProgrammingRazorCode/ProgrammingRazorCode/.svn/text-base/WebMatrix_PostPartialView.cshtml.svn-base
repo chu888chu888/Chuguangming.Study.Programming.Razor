@@ -1,0 +1,9 @@
+@{ 
+    var post = Page.Post;
+    var url = "http://www.myblog.com/posts/post.cshtml?id=" + post.ID; 
+}
+    
+<div>
+    <h3>@post.Title</h3>
+    <div>@post.Body</div>
+</div>

@@ -1,0 +1,10 @@
+﻿@{
+	try {
+		RunPage();
+	}
+	catch {
+		<div class="error">
+			We're sorry, but we could not process your order at this time.
+		</div>
+	}
+}

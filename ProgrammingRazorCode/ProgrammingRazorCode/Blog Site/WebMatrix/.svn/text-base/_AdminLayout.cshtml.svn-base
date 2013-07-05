@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+
+@section Header { 
+    @RenderSection("Header", required: false) 
+}
+
+@RenderBody()

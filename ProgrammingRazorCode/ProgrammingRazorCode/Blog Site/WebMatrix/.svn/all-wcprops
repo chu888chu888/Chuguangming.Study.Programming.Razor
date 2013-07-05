@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/352298/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix
+END
+Web.config
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/341223/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/Web.config
+END
+_PageStart.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/344363/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/_PageStart.cshtml
+END
+HelloWorld.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/344363/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/HelloWorld.cshtml
+END
+StartTime.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/342496/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/StartTime.cshtml
+END
+_Layout.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/341223/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/_Layout.cshtml
+END
+_AppStart.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/341260/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/_AppStart.cshtml
+END
+robots.txt
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/341223/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/robots.txt
+END
+Default.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/349750/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/Default.cshtml
+END
+_AdminLayout.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/341223/external/authors/books/9781449306762/current/code/Blog%20Site/WebMatrix/_AdminLayout.cshtml
+END

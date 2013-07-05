@@ -1,0 +1,14 @@
+@{ 
+    var post = Page.Post;
+    var url = "http://www.myblog.com/posts/post.cshtml?id=" + post.ID; 
+}
+    
+<div>
+    <h3>@post.Title</h3>
+    <div>@post.Body</div>
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <div>
+       <a href="http://twitter.com/share" class="twitter-share-button"
+          data-url="@url" data-text="@post.Title">Tweet</a>
+    </div>
+</div>

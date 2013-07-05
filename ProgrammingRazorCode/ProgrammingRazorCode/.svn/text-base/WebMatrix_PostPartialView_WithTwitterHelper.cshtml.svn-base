@@ -1,0 +1,18 @@
+@helper TweetButton(string url, string text) {
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <div>
+       <a href="http://twitter.com/share" class="twitter-share-button"
+          data-url="@url" data-text="@text">Tweet</a>
+    </div>
+}
+    
+@{ 
+    var post = Page.Post;
+    var url = "http://www.myblog.com/posts/post.cshtml?id=" + post.ID; 
+}
+
+<div>
+    <h3>@post.Title</h3>
+    <div>@post.Body</div>
+    @TweetButton(url: url, text: post.Title)
+</div>

@@ -1,0 +1,22 @@
+@{ Layout = null; }
+<html>
+<head>
+    <title>Website Error!</title>
+    <style>
+        body { text-align: center; background-color: #6CC5C3; }
+        .error-details .stack-trace { display: none; }
+        .error-details:hover .stack-trace { display: block; }
+    </style>
+</head>
+<body>
+    <h2>We're sorry, but our site has encountered an error!</h2>
+    <img src="http://bit.ly/pjnXyE" />
+   
+@if (ViewData["ErrorMessage"] != null) {
+    <div class="error-details">
+        <h2>@ViewData["ErrorMessage"]</h2>
+        <div class="stack-trace">@ViewData["StackTrace"]</div>
+    </div>
+}
+</body>
+</html>
